@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
-import g3 from "@/assets/gallery-3.jpg";
+import g3 from "@/assets/bao-image-cropped.png";
 import g4 from "@/assets/gallery-4.jpg";
 
 function Panel({
@@ -57,8 +57,8 @@ function Panel({
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         className="lg:col-span-6"
       >
-        <div className="relative aspect-[5/4] w-full rounded-[2rem] overflow-hidden shadow-card">
-          <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
+        <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden bg-[#f0e8d8]">
+          <img src={image} alt="" className="h-full w-full object-cover object-center" loading="lazy" />
         </div>
       </motion.div>
     </div>
