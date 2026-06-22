@@ -1,33 +1,43 @@
-# baobao-web2
+# BaoBao Web2
 
-This is the repository for the Baobao Web project.
+Welcome to the Baobao Web2 project. This project is built using modern web technologies including React, Vite, TanStack Router/Start, and Tailwind CSS.
 
-## Installation
+## Prerequisites
 
-You can install the dependencies for this project using either `npm` or `bun`.
+Make sure you have [Bun](https://bun.sh/) installed on your machine. You can also use Node.js and `npm`/`yarn`/`pnpm` if preferred, but `bun` is recommended as this project uses a `bun.lock` file.
 
-### Using npm
+## Getting Started
 
-To install the dependencies with npm, run the following command in your terminal:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/dilloncruz5/baobao-web2.git
+   cd baobao-web2
+   ```
 
-```bash
-npm install
-```
+2. **Install dependencies:**
+   ```bash
+   bun install
+   ```
+   *(If you use npm, run `npm install` instead)*
 
-### Using bun
+3. **Run the development server:**
+   ```bash
+   bun run dev
+   ```
+   This will start the Vite development server. Open your browser and navigate to the URL shown in the terminal (usually `http://localhost:5173`).
 
-If you prefer to use bun, you can install the dependencies by running:
+## Available Scripts
 
-```bash
-bun install
-```
+- `bun run dev` - Starts the development server.
+- `bun run build` - Builds the project for production.
+- `bun run preview` - Previews the production build locally.
+- `bun run lint` - Runs ESLint to find issues in the code.
+- `bun run format` - Runs Prettier to format the code.
 
-## Running the project
+## Tech Stack
 
-To run the development server, use one of the following commands:
-
-```bash
-npm run dev
-# or
-bun run dev
-```
+- **Framework:** React + Vite
+- **Routing:** TanStack Router / TanStack Start
+- **Styling:** Tailwind CSS + Radix UI Primitives
+- **Animations:** Framer Motion (`motion`)
+- **Package Manager:** Bun
