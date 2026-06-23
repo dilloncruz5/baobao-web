@@ -23,8 +23,8 @@ const beats = [
 export function Storytelling() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 14]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.05, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0], [0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0, 1], [1, 1, 1]);
 
   return (
     <section id="story" ref={ref} className="relative bg-cream">
