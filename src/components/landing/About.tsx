@@ -29,7 +29,7 @@ export function About() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-5">Our Brand</div>
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5.2rem)] leading-[1] text-ink">
+            <h2 className="font-display text-[clamp(2.5rem,6vw,5.2rem)] leading-[1.5] text-ink">
               A Chennai original, <em className="italic text-gradient-warm">reimagining</em> the bao.
             </h2>
             <div className="mt-8 space-y-5 text-lg text-foreground/75 leading-relaxed max-w-xl">

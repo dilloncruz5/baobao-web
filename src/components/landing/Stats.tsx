@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { AnimatedCounter } from "./AnimatedCounter";
 
 const stats = [
-  { value: 10, suffix: "", label: "Stores across South India" },
+  { value: 11, suffix: "", label: "Stores across South India" },
   { value: 6, suffix: "", label: "Cities and counting" },
   { value: 7, suffix: "", label: "Signature bao flavours" },
   { value: 100, suffix: "%", label: "Indian-flavoured filling, every basket" },
@@ -22,7 +22,7 @@ export function Stats() {
       <div className="relative mx-auto max-w-[1400px] px-6">
         <div className="max-w-3xl mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-amber mb-4">By the numbers</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1]">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1]">
             A small kitchen, <em className="italic text-gradient-warm">growing fast.</em>
           </h2>
         </div>

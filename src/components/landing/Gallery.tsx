@@ -40,7 +40,7 @@ export function Gallery() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Lookbook</div>
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
+            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
               A morning in <em className="italic text-gradient-warm">pictures.</em>
             </h2>
           </div>

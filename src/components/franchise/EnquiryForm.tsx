@@ -82,7 +82,7 @@ export function EnquiryForm() {
           className="lg:col-span-5"
         >
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-5">Enquire</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.1] text-ink">
             Start your <em className="italic text-gradient-warm">Bao Bao</em> journey.
           </h2>
           <p className="mt-6 text-lg text-foreground/70 max-w-md leading-relaxed">

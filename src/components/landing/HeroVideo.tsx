@@ -33,7 +33,7 @@ export function HeroVideo() {
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-40 pb-20 md:pt-44 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <h1 className="font-display text-[clamp(3.2rem,8vw,7.5rem)] leading-[0.95] text-ink">
+            <h1 className="font-display text-[clamp(3.2rem,8vw,7.5rem)] leading-[0.97] text-ink">
               {line1.map((w, i) => (
                 <span key={i} className="inline-block mr-[0.25em] align-bottom">
                   <motion.span
@@ -110,7 +110,7 @@ export function HeroVideo() {
               >
                 <div className="text-[10px] uppercase tracking-widest text-foreground/60">Stores</div>
                 <div className="font-display text-lg md:text-2xl text-ink">
-                  9 & growing
+                  11 & growing
                 </div>
               </motion.div>
               <motion.div

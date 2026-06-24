@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
+import { MdEmail } from "react-icons/md";
+import { SiInstagram } from "react-icons/si";
 
 export function Footer() {
   return (
     <footer className="relative bg-ink text-background pt-20 pb-10 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="grid grid-cols-2 md:grid-cols-12 gap-10 pb-16 border-b border-background/10">
-          <div className="col-span-2 md:col-span-5">
+          <div className="col-span-2 md:col-span-3">
             <div className="flex items-center gap-2">
               <span className="h-9 w-9 rounded-full bg-gradient-warm shadow-glow" />
               <span className="font-display text-3xl">Bao Bao</span>
@@ -28,17 +30,29 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-background/80">
               <li>Chennai</li>
               <li>Singapore</li>
-              <li>Bengaluru</li>
               <li>Pondicherry</li>
+              <li>Bengaluru</li>
               <li>Tirupati · Madurai · Thanjavur</li>
             </ul>
           </div>
           <div className="md:col-span-3">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-background/50 mb-4">Contact</div>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li>
+                <a href="mailto:baobaooperation@gmail.com" className="hover:text-primary inline-flex items-center gap-2">
+                  <MdEmail size={20} />
+                  baobaooperation@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="md:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.3em] text-background/50 mb-4">Follow along</div>
             <div className="mt-2 flex gap-3 text-sm text-background/70">
-              <a href="#" className="hover:text-primary">Instagram</a>
-              <a href="#" className="hover:text-primary">Facebook</a>
-              <a href="#" className="hover:text-primary">YouTube</a>
+              <a href="#" className="hover:text-primary inline-flex items-center gap-2">
+                <SiInstagram size={20} />
+                Instagram
+              </a>
             </div>
             <Link
               to="/franchise"
@@ -56,9 +70,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-background/50">
           <div>© {new Date().getFullYear()} Bao Bao. Made in Chennai.</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary">Privacy</a>
-            <a href="#" className="hover:text-primary">Terms</a>
-            <a href="#" className="hover:text-primary">Careers</a>
+
           </div>
         </div>
       </div>

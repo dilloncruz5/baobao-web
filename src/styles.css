@@ -47,8 +47,8 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: "Roboto", sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", sans-serif;
+  --font-sans: "Roboto Condensed", ui-sans-serif, system-ui, sans-serif;
   --font-brand: "Branding SF Narrow Black", "Inter Tight", "Arial Narrow", sans-serif;
 
   --animate-float: float 8s ease-in-out infinite;
@@ -180,8 +180,7 @@
   .font-display {
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.02em;
-    font-style: normal;
+    letter-spacing: -0.04em;
   }
 
   .text-gradient-warm {
@@ -189,7 +188,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding-right: 0.2em;
+    padding-right: 0.15em;
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
+    display: inline-block;
   }
 
   .glass {

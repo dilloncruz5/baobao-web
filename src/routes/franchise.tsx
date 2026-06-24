@@ -130,7 +130,7 @@ function Opportunity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink"
+            className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink"
           >
             A breakout brand, <em className="italic text-gradient-warm">at the start of its journey.</em>
           </motion.h2>
@@ -170,7 +170,7 @@ function WhyPartner() {
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Why partner with us</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
             Four reasons it <em className="italic text-gradient-warm">works.</em>
           </h2>
         </div>
@@ -231,7 +231,7 @@ function Support() {
       <div className="relative mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-amber mb-4">Support & training</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1]">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1]">
             You bring the energy. <em className="italic text-gradient-warm">We bring the playbook.</em>
           </h2>
         </div>
@@ -269,7 +269,7 @@ function Process() {
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The process</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
             Four steps to <em className="italic text-gradient-warm">opening day.</em>
           </h2>
         </div>

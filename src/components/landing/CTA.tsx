@@ -22,8 +22,9 @@ export function CTA() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="text-xs uppercase tracking-[0.3em] opacity-80 mb-6">Come hungry</div>
-          <h2 className="font-display text-[clamp(3rem,9vw,8rem)] leading-[0.95]">
-            Find your <em className="italic">nearest Bao Bao.</em>
+          <h2 className="font-display text-[clamp(3rem,9vw,8rem)] leading-[1.1]">
+            Find your nearest <br />
+            <em className="italic">Bao Bao.</em>
           </h2>
           <p className="mt-8 max-w-xl mx-auto text-lg opacity-90">
             Nine stores across Chennai, Pondicherry, Tirupati, Madurai, Bengaluru and Thanjavur —

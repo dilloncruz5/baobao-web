@@ -16,7 +16,7 @@ export const Route = createFileRoute("/locations")({
       { property: "og:title", content: "Find your nearest Bao Bao" },
       {
         property: "og:description",
-        content: "10 stores across 7 cities and growing — get directions to your nearest Bao Bao.",
+        content: "11 stores across 7 cities and growing — get directions to your nearest Bao Bao.",
       },
     ],
   }),
@@ -55,7 +55,7 @@ function LocationsPage() {
                   <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
                     {String(gi + 1).padStart(2, "0")} — City
                   </div>
-                  <h2 className="font-display text-4xl md:text-6xl text-ink leading-[1]">
+                  <h2 className="font-display text-4xl md:text-6xl text-ink leading-[1.1]">
                     {group.city}
                   </h2>
                 </div>
@@ -89,7 +89,7 @@ function LocationsHero() {
           className="inline-flex glass-cream rounded-full px-4 py-1.5 text-xs tracking-wider uppercase text-primary items-center gap-2 mb-8"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-          10 stores · 7 cities · growing
+          11 stores · 7 cities · growing
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -152,7 +152,7 @@ function LocationsHero() {
 
 function LocationsStats() {
   const stats = [
-    { value: 10, suffix: "", label: "Locations" },
+    { value: 11, suffix: "", label: "Locations" },
     { value: 7, suffix: "", label: "Cities" },
     { value: 100, suffix: "%", label: "Growing franchise network" },
   ];

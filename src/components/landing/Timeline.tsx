@@ -4,7 +4,7 @@ const milestones = [
   { year: "Day One", title: "An idea on Chennai's streets", body: "A small kitchen, a big question — could a fine-dining dish belong on the street?" },
   { year: "Outlet One", title: "Our first Bao Bao opens", body: "A neighbourhood favourite is born. Word travels fast. Queues form faster." },
   { year: "Flavour Lab", title: "The fusion menu lands", body: "Tandoori, dynamite, sambal, soy onions. Indian boldness meets Asian softness." },
-  { year: "South India + beyond", title: "Ten stores, seven cities", body: "From Chennai to Singapore, Bengaluru, Pondicherry, Tirupati, Madurai and Thanjavur." },
+  { year: "South India + beyond", title: "Eleven stores, seven cities", body: "From Chennai to Singapore, Bengaluru, Pondicherry, Tirupati, Madurai and Thanjavur." },
   { year: "What's next", title: "A global bao brand", body: "Our franchise programme opens the door to partners who share our obsession." },
 ];
 
@@ -33,7 +33,7 @@ export function Timeline() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Our Journey</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
             From one kitchen <em className="italic text-gradient-warm">to many.</em>
           </h2>
         </div>

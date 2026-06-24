@@ -19,7 +19,7 @@ export function WhyWeExist() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-6">Why Bao Bao exists</div>
-          <h2 className="font-display text-[clamp(2.8rem,9vw,8rem)] leading-[0.95] text-ink">
+          <h2 className="font-display text-[clamp(2.8rem,9vw,8rem)] leading-[1.1] text-ink">
             Because great food <em className="italic text-gradient-warm">belongs to everyone</em> — not just
             the table with the white tablecloth.
           </h2>
