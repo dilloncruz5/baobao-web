@@ -12,7 +12,8 @@ export const locations: Location[] = [
   { name: "Pondicherry", city: "Pondicherry", url: "https://maps.app.goo.gl/ZWtn9FuoDWBKx67H8" },
   { name: "Tirupati — Branch 1", city: "Tirupati", url: "https://maps.app.goo.gl/haqw6jdWrhsCqudF6" },
   { name: "Tirupati — Branch 2", city: "Tirupati", url: "https://maps.app.goo.gl/4EdNPsZ8Fq9DA7au5" },
-  { name: "Madurai", city: "Madurai", url: "https://maps.app.goo.gl/Kp8h6S2tdmVY9TMn7" },
+  { name: "Madurai — Branch 1", city: "Madurai", url: "https://maps.app.goo.gl/Kp8h6S2tdmVY9TMn7" },
+  { name: "Madurai — Branch 2", city: "Madurai", url: "https://maps.app.goo.gl/rQPmxGbHvWaMABH28" },
   { name: "Bengaluru", city: "Bengaluru", url: "https://maps.app.goo.gl/pmBMHPpqHBTqijm99" },
   { name: "Thanjavur", city: "Thanjavur", url: "https://maps.app.goo.gl/fZ1SsP8UjCPfjqwQ9" },
 ];

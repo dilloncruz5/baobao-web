@@ -35,7 +35,7 @@ function ParallaxImg({
 
 export function Gallery() {
   return (
-    <section className="relative bg-cream py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-cream pt-12 pb-28 md:pt-16 md:pb-36 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>

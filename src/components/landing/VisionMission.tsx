@@ -21,9 +21,8 @@ function Panel({
   const dark = tone === "ink";
   return (
     <div
-      className={`relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-24 md:py-32 px-6 mx-auto max-w-[1400px] ${
-        reverse ? "lg:[&>div:first-child]:order-2" : ""
-      }`}
+      className={`relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-24 md:py-32 px-6 mx-auto max-w-[1400px] ${reverse ? "lg:[&>div:first-child]:order-2" : ""
+        }`}
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -36,16 +35,14 @@ function Panel({
           {eyebrow}
         </div>
         <h2
-          className={`font-display text-[clamp(2.8rem,7vw,6rem)] leading-[0.95] ${
-            dark ? "text-background" : "text-ink"
-          }`}
+          className={`font-display text-[clamp(2.8rem,7vw,6rem)] leading-[0.95] ${dark ? "text-background" : "text-ink"
+            }`}
         >
           {title}
         </h2>
         <p
-          className={`mt-7 text-lg leading-relaxed max-w-lg ${
-            dark ? "text-background/75" : "text-foreground/75"
-          }`}
+          className={`mt-7 text-lg leading-relaxed max-w-lg ${dark ? "text-background/75" : "text-foreground/75"
+            }`}
         >
           {body}
         </p>

@@ -29,7 +29,7 @@ export function Timeline() {
   }
 
   return (
-    <section className="relative bg-cream py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-cream pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Our Journey</div>
@@ -57,9 +57,9 @@ export function Timeline() {
               d={d}
               fill="none"
               stroke="url(#tl-grad)"
-              strokeWidth={0.5}
+              strokeWidth={2}
               strokeLinecap="round"
-              strokeDasharray="0.6 1.2"
+              strokeDasharray="4 6"
               vectorEffect="non-scaling-stroke"
               initial={{ pathLength: 0, opacity: 0 }}
               whileInView={{ pathLength: 1, opacity: 0.9 }}

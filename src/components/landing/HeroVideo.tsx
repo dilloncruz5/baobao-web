@@ -26,7 +26,7 @@ export function HeroVideo() {
       >
         <div className="glass-cream rounded-full px-2 md:px-4 py-1 text-[10px] md:text-xs tracking-wide md:tracking-wider uppercase text-primary flex items-center gap-1 md:gap-2 w-full md:w-auto justify-center">
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-          Now serving across 6 cities in South India
+          Now serving across 6 cities in India
         </div>
       </motion.div>
 
@@ -35,7 +35,7 @@ export function HeroVideo() {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <h1 className="font-display text-[clamp(3.2rem,8vw,7.5rem)] leading-[0.95] text-ink">
               {line1.map((w, i) => (
-                <span key={i} className="inline-block overflow-hidden mr-[0.25em] align-bottom">
+                <span key={i} className="inline-block mr-[0.25em] align-bottom">
                   <motion.span
                     custom={i}
                     variants={word}
@@ -47,7 +47,7 @@ export function HeroVideo() {
                   </motion.span>
                 </span>
               ))}
-              <span className="inline-block overflow-hidden align-bottom">
+              <span className="inline-block align-bottom">
                 <motion.span custom={3} variants={word} initial="hidden" animate="show" className="inline-block">
                   <em className="italic text-gradient-warm">reimagined.</em>
                 </motion.span>

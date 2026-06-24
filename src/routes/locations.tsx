@@ -34,8 +34,14 @@ function LocationsPage() {
     <>
       <LocationsHero />
       <LocationsStats />
-      <section className="relative bg-cream py-20 md:py-24">
-        <div className="mx-auto max-w-[1400px] px-6 space-y-12">
+      <section className="relative bg-cream py-20 md:py-24 overflow-hidden">
+        {/* Subtle blurred orange/amber background accents */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-amber/20 blur-[120px]" />
+          <div className="absolute top-1/2 -left-40 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[100px]" />
+          <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-ember/10 blur-[100px]" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-[1400px] px-6 space-y-12">
           {byCity.map((group, gi) => (
             <div key={group.city}>
               <motion.div

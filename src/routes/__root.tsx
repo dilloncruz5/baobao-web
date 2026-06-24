@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Bao Bao — Indian-flavoured baos from Chennai" },
-      { name: "description", content: "A Chennai-born street-food brand serving Indian-flavoured baos across South India. Discover our story, find a store, or become a franchise partner." },
+      { name: "description", content: "A Chennai-born street-food brand serving Indian-flavoured baos across India. Discover our story, find a store, or become a franchise partner." },
       { name: "author", content: "Bao Bao" },
       { property: "og:title", content: "Bao Bao — Indian-flavoured baos from Chennai" },
-      { property: "og:description", content: "A Chennai-born street-food brand serving Indian-flavoured baos across South India." },
+      { property: "og:description", content: "A Chennai-born street-food brand serving Indian-flavoured baos across India." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#E96724" },
@@ -91,7 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
+
       },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
