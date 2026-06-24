@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { FloatingShapes } from "@/components/landing/FloatingShapes";
 import { EnquiryForm } from "@/components/franchise/EnquiryForm";
-import showcase from "@/assets/showcase-1.jpg";
-import g1 from "@/assets/gallery-1.jpg";
+import showcase from "@/assets/franchise-hero.png";
+import opportunityImg from "@/assets/franchise-opportunity.jpg";
 
 export const Route = createFileRoute("/franchise")({
   head: () => ({
@@ -94,8 +94,13 @@ function FranchiseHero() {
           className="lg:col-span-5 relative"
         >
           <div className="absolute inset-0 rounded-full blur-3xl opacity-70 bg-gradient-ember scale-90" />
-          <div className="relative aspect-[4/5] w-full max-w-[480px] mx-auto rounded-[2.5rem] overflow-hidden shadow-card">
-            <img src={showcase} alt="" className="h-full w-full object-cover" />
+          <div className="relative w-full max-w-[480px] mx-auto rounded-[2.5rem] overflow-hidden shadow-card">
+            <img
+              src={showcase}
+              alt="Bao Bao Store"
+              className="block w-full h-auto"
+              loading="lazy"
+            />
           </div>
           <motion.div
             animate={{ y: [0, -10, 0] }}
@@ -130,7 +135,7 @@ function Opportunity() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink"
+            className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink"
           >
             A breakout brand, <em className="italic text-gradient-warm">at the start of its journey.</em>
           </motion.h2>
@@ -148,8 +153,12 @@ function Opportunity() {
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-6"
         >
-          <div className="relative aspect-[5/4] rounded-[2rem] overflow-hidden shadow-card">
-            <img src={g1} alt="" className="h-full w-full object-cover" />
+          <div className="relative w-full max-w-[850px] rounded-[2rem] overflow-hidden">
+            <img
+              src={opportunityImg}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </div>
         </motion.div>
       </div>
@@ -170,7 +179,7 @@ function WhyPartner() {
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Why partner with us</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
             Four reasons it <em className="italic text-gradient-warm">works.</em>
           </h2>
         </div>
@@ -231,7 +240,7 @@ function Support() {
       <div className="relative mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-amber mb-4">Support & training</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1]">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1]">
             You bring the energy. <em className="italic text-gradient-warm">We bring the playbook.</em>
           </h2>
         </div>
@@ -269,7 +278,7 @@ function Process() {
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="max-w-2xl mb-16">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">The process</div>
-          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
             Four steps to <em className="italic text-gradient-warm">opening day.</em>
           </h2>
         </div>
