@@ -49,7 +49,12 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.3em] text-background/50 mb-4">Follow along</div>
             <div className="mt-2 flex gap-3 text-sm text-background/70">
-              <a href="#" className="hover:text-primary inline-flex items-center gap-2">
+              <a
+                href="https://www.instagram.com/baobao.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary inline-flex items-center gap-2"
+              >
                 <SiInstagram size={20} />
                 Instagram
               </a>
