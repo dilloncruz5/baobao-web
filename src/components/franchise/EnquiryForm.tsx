@@ -2,25 +2,27 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import emailjs from '@emailjs/browser';
 
 const schema = z.object({
-  full_name: z.string().trim().min(2, "Please enter your full name").max(100),
-  email: z.string().trim().email("Enter a valid email").max(255),
+  from_name: z.string().trim().min(2, "Please enter your full name").max(100),
+  from_email: z.string().trim().email("Enter a valid email").max(255),
   phone: z.string().trim().min(7, "Enter a valid phone number").max(20),
   city: z.string().trim().min(2, "City required").max(80),
   state: z.string().trim().min(2, "State required").max(80),
+  country: z.string().trim().min(2, "Country required").max(80),
   message: z.string().trim().max(1000).optional(),
 });
 
 type FormState = z.infer<typeof schema>;
 
 const initial: FormState = {
-  full_name: "",
-  email: "",
+  from_name: "",
+  from_email: "",
   phone: "",
   city: "",
   state: "",
+  country: "",
   message: "",
 };
 
@@ -48,20 +50,43 @@ export function EnquiryForm() {
       toast.error("Please check the form and try again.");
       return;
     }
+    
     setSubmitting(true);
-    const { error } = await supabase.from("franchise_enquiries").insert({
-      full_name: parsed.data.full_name,
-      email: parsed.data.email,
-      phone: parsed.data.phone,
-      city: parsed.data.city,
-      state: parsed.data.state,
-      message: parsed.data.message ?? null,
-    });
-    setSubmitting(false);
-    if (error) {
-      toast.error("Something went wrong. Please try again.");
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_s1lbqyz",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_h7tlzub",
+        {
+          from_name: parsed.data.from_name,
+          from_email: parsed.data.from_email,
+          phone: parsed.data.phone,
+          location: `${parsed.data.city}, ${parsed.data.state}, ${parsed.data.country}`,
+          city: parsed.data.city,
+          state: parsed.data.state,
+          country: parsed.data.country,
+          message: parsed.data.message || "No message",
+        },
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "tctI1qTALHul1_9RP"
+        }
+      );
+    } catch (error: any) {
+      console.error("EmailJS Error:", error);
+      if (error?.text) {
+        toast.error(`EmailJS Error: ${error.text}`, {
+          description: "If this issue persists, please kindly contact boabooopertions@gmail.com directly.",
+          duration: 8000,
+        });
+      } else {
+        toast.error("Something went wrong.", {
+          description: "Please kindly contact boabooopertions@gmail.com directly from the contact section below.",
+          duration: 8000,
+        });
+      }
+      setSubmitting(false);
       return;
     }
+    setSubmitting(false);
     setDone(true);
     setValues(initial);
     toast.success("Enquiry sent — we'll be in touch within 48 hours.");
@@ -129,25 +154,28 @@ export function EnquiryForm() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <Field label="Full name" error={errors.full_name}>
+              <Field label="Full name" error={errors.from_name}>
                 <input
-                  value={values.full_name}
-                  onChange={(e) => update("full_name", e.target.value)}
+                  name="from_name"
+                  value={values.from_name}
+                  onChange={(e) => update("from_name", e.target.value)}
                   className="input"
                   placeholder="Your name"
                 />
               </Field>
-              <Field label="Email" error={errors.email}>
+              <Field label="Email" error={errors.from_email}>
                 <input
+                  name="from_email"
                   type="email"
-                  value={values.email}
-                  onChange={(e) => update("email", e.target.value)}
+                  value={values.from_email}
+                  onChange={(e) => update("from_email", e.target.value)}
                   className="input"
                   placeholder="you@example.com"
                 />
               </Field>
               <Field label="Phone" error={errors.phone}>
                 <input
+                  name="phone"
                   type="tel"
                   value={values.phone}
                   onChange={(e) => update("phone", e.target.value)}
@@ -157,22 +185,34 @@ export function EnquiryForm() {
               </Field>
               <Field label="City" error={errors.city}>
                 <input
+                  name="city"
                   value={values.city}
                   onChange={(e) => update("city", e.target.value)}
                   className="input"
-                  placeholder="Where would you like to open?"
+                  placeholder="City"
                 />
               </Field>
-              <Field label="State" error={errors.state} className="md:col-span-2">
+              <Field label="State" error={errors.state}>
                 <input
+                  name="state"
                   value={values.state}
                   onChange={(e) => update("state", e.target.value)}
                   className="input"
                   placeholder="State"
                 />
               </Field>
+              <Field label="Country" error={errors.country}>
+                <input
+                  name="country"
+                  value={values.country}
+                  onChange={(e) => update("country", e.target.value)}
+                  className="input"
+                  placeholder="Country"
+                />
+              </Field>
               <Field label="Message" error={errors.message} className="md:col-span-2">
                 <textarea
+                  name="message"
                   value={values.message}
                   onChange={(e) => update("message", e.target.value)}
                   rows={4}

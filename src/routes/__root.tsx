@@ -7,14 +7,14 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { SmoothScroll } from "@/components/landing/SmoothScroll";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { Toaster } from "@/components/ui/sonner";
-
+import LoadingScreen from "@/components/Loader/LoadingScreen";
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -122,9 +122,11 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const [showLoader, setShowLoader] = useState(true);
 
   return (
     <QueryClientProvider client={queryClient}>
+      {showLoader && <LoadingScreen onFinish={() => setShowLoader(false)} />}
       <SmoothScroll />
       <Nav />
       <main className="bg-background text-foreground overflow-x-hidden">

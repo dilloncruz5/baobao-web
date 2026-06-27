@@ -115,7 +115,7 @@ export function VisionMission() {
           }}
         />
 
-        <div className="relative flex flex-col lg:flex-row items-center overflow-hidden max-w-[1600px] mx-auto">
+        <div className="relative flex flex-col lg:flex-row items-center overflow-hidden w-full">
 
           {/* IMAGE */}
           <motion.div
@@ -123,7 +123,7 @@ export function VisionMission() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex-shrink-0"
+            className="relative w-full lg:w-1/2 flex justify-start items-center h-full"
           >
             <div
               aria-hidden
@@ -139,8 +139,7 @@ export function VisionMission() {
             <img
               src={storyHero}
               alt="Bao Bao"
-              className="relative block w-full lg:w-auto lg:max-h-[620px] lg:-ml-8"
-              style={{ objectFit: "contain" }}
+              className="relative block w-full h-[400px] sm:h-[500px] lg:h-[80vh] lg:max-h-[1000px] object-contain object-left"
               loading="lazy"
             />
           </motion.div>
@@ -151,7 +150,7 @@ export function VisionMission() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="py-24 md:py-32 px-8 lg:px-16 xl:px-20 lg:flex-1"
+            className="py-24 md:py-32 px-8 lg:px-16 xl:px-24 lg:w-1/2 max-w-2xl"
           >
             <div className="text-xs uppercase tracking-[0.3em] mb-5 text-amber">
               Our Mission

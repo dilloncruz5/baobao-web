@@ -45,7 +45,7 @@ function ParallaxImg({
 
 export function Gallery() {
   return (
-    <section className="relative bg-cream py-28 md:py-36 overflow-hidden">
+    <section className="relative bg-cream bg-grid-pattern pt-4 pb-28 md:pt-6 md:pb-36 overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
@@ -53,13 +53,13 @@ export function Gallery() {
               Lookbook
             </div>
 
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1] text-ink">
-              A morning in <em className="italic text-gradient-warm">pictures.</em>
+            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.1] text-ink">
+              The Perfect <em className="italic text-gradient-warm">Fold</em>
             </h2>
           </div>
 
           <p className="max-w-sm text-foreground/70 text-lg">
-            Quiet moments from the kitchen, captured between batches.
+            Our baos are fresh with the best ingredients. .
           </p>
         </div>
 

@@ -29,7 +29,7 @@ export function Timeline() {
   }
 
   return (
-    <section className="relative bg-cream pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
+    <section className="relative bg-cream bg-grid-pattern pt-24 pb-4 md:pt-32 md:pb-6 overflow-hidden">
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Our Journey</div>

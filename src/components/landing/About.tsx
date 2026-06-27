@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import g2 from "@/assets/gallery-2.jpg";
+import g2 from "@/assets/baoman.png";
 
 export function About() {
   return (
